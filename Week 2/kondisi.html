@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kondisi</title>
+</head>
+<body>
+    <h1>Belajar Kondisi dalam JavaScript</h1>
+
+    <script>
+        let nilai = 85;
+        
+        if (nilai >= 90) {
+            console.log("Excellent! Grade A");
+        } else if (nilai >= 80) {
+            console.log("Bagus! Grade B");
+        } else if (nilai >= 70) {
+            console.log("Cukup! Grade C");
+        } else if (nilai >= 60) {
+            console.log("Kurang! Grade D");
+        } else {
+            console.log("Gagal! Grade E");
+        }
+
+        let beratBadan = 70;
+        let tinggiBadan = 1.75;
+        let bmi = beratBadan / (tinggiBadan * tinggiBadan);
+        
+        console.log(`BMI kamu: ${bmi.toFixed(1)}`);
+
+        if (bmi < 18.5) {
+            console.log("Kurus");
+        } else if (bmi >= 18.5 && bmi < 25) {
+            console.log("Normal");
+        } else if (bmi >= 25 && bmi < 30) {
+            console.log("Gemuk");
+        } else {
+            console.log("Obesitas");
+        }
+
+        let jam = 14;
+
+        if (5 <= jam && jam <= 11) {
+            console.log("Selamat Pagi");
+        } else if (12 <= jam && jam <= 14) {
+            console.log("Selamat Siang");
+        } else if (15 <= jam && jam <= 17) {
+            console.log("Selamat Sore");
+        } else if (18 <= jam && jam <= 23) {
+            console.log("Selamat Malam");
+        } else {
+            console.log("Tengah Malam");
+        }
+    </script>
+</body>
+</html>

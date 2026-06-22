@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop</title>
+</head>
+<body>
+    <h1>Belajar Loop dalam JavaScript</h1>
+
+    <script>
+        // Tampilkan angka 1 sampai 30
+        for (let i = 1; i <= 30; i++) {
+            console.log(i);
+        }
+        // Kalau angka habis dibagi 3, tampilkan "Fizz"
+        // Kalau angka habis dibagi 5, tampilkan "Buzz"
+        // Kalau angka habis dibagi 3 dan 5, tampilkan "FizzBuzz
+        for (let i = 1; i <= 30; i++) {
+            if (i % 3 === 0 && i % 5 === 0) {
+                console.log("FizzBuzz");
+            } else if (i % 3 === 0) {
+                console.log("Fizz");
+            } else if (i % 5 === 0) {
+                console.log("Buzz");
+            } else {
+                console.log(i);
+            }
+        }
+
+        let nilaiSiswa = [75, 90, 60, 85, 95, 70, 55, 88];
+
+        console.log("Nilai Siswa:");
+        for (let i = 0; i < nilaiSiswa.length; i++) {
+            console.log(nilaiSiswa[i]);
+        }
+        //Hitung rata-rata nilai siswa
+        let totalNilai = 0;
+        for (let i = 0; i < nilaiSiswa.length; i++) {
+            totalNilai += nilaiSiswa[i];
+        }
+        let rataRata = totalNilai / nilaiSiswa.length;
+        console.log("Rata-rata nilai siswa:", rataRata);
+        // Tampilkan nilai tertinggi
+        let nilaiTertinggi = nilaiSiswa[0];
+        for (let i = 1; i < nilaiSiswa.length; i++) {
+            if (nilaiSiswa[i] > nilaiTertinggi) {
+                nilaiTertinggi = nilaiSiswa[i];
+            }
+        }
+        console.log("Nilai tertinggi:", nilaiTertinggi);
+        // Hitung berapa siswa yang lulus (nilai >= 70)
+        let jumlahLulus = 0;
+        for (let i = 0; i < nilaiSiswa.length; i++) {
+            if (nilaiSiswa[i] >= 70) {
+                jumlahLulus++;
+            }
+        }
+        console.log("Jumlah siswa yang lulus:", jumlahLulus);
+
+        let daftarBelanja = ["Beras", "Minyak", "Gula", "Telur", "Tepung"];
+        console.log("Daftar Belanja:");
+        for (let i = 0; i < daftarBelanja.length; i++) {
+            console.log(`${i + 1}. ${daftarBelanja[i]}`);
+        }
+    </script>
+</body>
+</html>

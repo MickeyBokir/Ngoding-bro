@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    <h1>Belajar Function dalam JavaScript</h1>
+
+    <script>
+        // Function menyapa dengan nama dan kota
+        function sapa (nama, kota) {
+            console.log(`Halo ${nama} dari ${kota}!`);
+        }
+        // Memanggil function sapa
+        sapa("Fajar", "Tangerang");
+
+        // Function hitung luas persegi panjang
+        function luasPersegi (a, b) {
+            return a * b;
+        }
+        // Memanggil function luasPersegi
+        let panjang = 10;
+        let lebar = 5;
+        let luas = luasPersegi(panjang, lebar);
+        console.log(`Luas persegi panjang: ${luas}`);
+
+        // Function cek ganjil atau genap
+        function cekGanjilGenap(angka) {
+            if (angka % 2 === 0) {
+                console.log(`${angka} adalah bilangan genap.`);
+            } else {
+                console.log(`${angka} adalah bilangan ganjil.`);
+            }
+        }
+        // Memanggil function cekGanjilGenap
+        cekGanjilGenap(7);
+        cekGanjilGenap(4);
+
+        function analisaNilai (arr) {
+            let totalNilai = 0;
+            let nilaiTertinggi = arr[0];
+            let jumlahLulus = 0;
+
+            for (let i = 0; i < arr.length; i++) {
+                totalNilai += arr[i];
+                if (arr[i] > nilaiTertinggi) {
+                    nilaiTertinggi = arr[i];
+                }
+                if (arr[i] >= 70) {
+                    jumlahLulus++;
+                }
+            }
+            let rataRata = totalNilai / arr.length;
+
+            return {
+                total: totalNilai,
+                rataRata: rataRata,
+                tertinggi: nilaiTertinggi,
+                jumlahLulus: jumlahLulus
+            };
+        }
+        let hasil = analisaNilai([75, 90, 60, 85, 95, 70, 55, 88]);
+        console.log("Hasil Analisa Nilai:");
+        console.log(hasil);
+
+        // Arrow function
+        const sapaArrow = (nama, kota) => {
+            console.log(`Halo ${nama} dari ${kota}!`);
+        }
+        sapaArrow("Fajar", "Tangerang");
+
+        const luasPersegiArrow = (p, l) => {
+            return p * l;
+        }
+        let luasArrow = luasPersegiArrow(panjang, lebar);
+        console.log(`Luas persegi panjang (arrow function): ${luasArrow}`);
+
+        const cekGanjilGenapArrow = angka => {
+            if (angka % 2 === 0) {
+                console.log(`${angka} adalah bilangan genap.`);
+            } else {
+                console.log(`${angka} adalah bilangan ganjil.`);
+            }
+        }
+        cekGanjilGenapArrow(7);
+        cekGanjilGenapArrow(4);
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+.galeri {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.foto-item {
+    width: 100%;
+    text-align: center;
+}
+
+.foto-item img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.foto-item:first-child {
+    grid-column: span 2;
+}
